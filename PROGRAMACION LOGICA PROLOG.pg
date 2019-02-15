@@ -1,0 +1,19 @@
+﻿/* animales */
+aves(canarios).
+felinos(gatos).
+mamiferos(perros). 
+peces(pezespada).
+
+canario(tweety).
+gato(michifuz).
+perro(fido).
+delfin(flipper). 
+pezespada(cuchi).
+
+/* reglas */
+vuelan(X):-aves(X);canario(X).
+nadan(X):-peces(X);pezespada(X);delfin(X).
+corren(X):-mamiferos(X);felinos(X);gato(X).
+caminan(Y):-mamiferos(Y);aves(Y);felinos(Y);canario(Y);gato(Y).
+
+es_mamifero(X):-perro(X);gato(X);mamiferos(X);delfin(X);felinos(X).
